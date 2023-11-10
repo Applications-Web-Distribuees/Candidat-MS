@@ -9,6 +9,9 @@ public class CandidatService {
     @Autowired
     private CandidatRepository candidateRepository;
 
+    public List<Candidat> getAll(){
+        return candidateRepository.findAll();
+    }
     public Candidat addCandidat(Candidat candidate) {
         return candidateRepository.save(candidate);
     }
